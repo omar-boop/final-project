@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Life Is Strange </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body{
+            background-color:black;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('blink.jpg')
+        }
+}
+    h1{
+        color: black;
+        text-align:center;
+        font-size: 80px; 
+    }
+    img{
+        width: 500px;
+        box-align:center;
+        height : 375px;
+        
+    }
+    p{
+        color: rgb(14, 13, 13);
+        font-size: 50px;
+    }
+    .centered{
+        text-align: center;
+    }
+    .myClass{
+        color : black;
+    }
+  table, td{
+      border: 10px solid black;
+      
+  }
+  #myVideo{
+      margin-right: 300px;
+      
+  }
+  #myStuff{
+    margin-right: 300px
+  }
+    </style>
+    <body>
+
+      <div class = "centered"><img src = "life.png">
+        <br><br>
+        <table align ="center" style="widows: 100%" border = "1">
+                <tr>
+                  <td><img src = "qq.jpg"></th>
+                  <td><img src = "aa.jpg" ></th> 
+                </tr>
+                <tr>
+                  <td><img src = "oo.png"></td>
+                  <td><img src = hh.jpg></td> 
+                </tr>
+                <tr>
+                  <td><img src = "LOU.jpg"></td>
+                  <td><img src = 2.jpg></td> 
+                </tr>
+              </table>
+            
+            <br>
+            <iframe id = "myVideo" width="560" height="315" src="https://www.youtube.com/embed/gdls5xWiQYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8QLBXQC57Ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id = "myStuff" width="560" height="315" src="https://www.youtube.com/embed/Q7381oAonsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XLjkciGZ3Tk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          </div>
+
+           <script> 
+document.getElementById('content').innerHTML=localStorage.getItem('listItem');
+document.getElementById ('addBtn').addEventListener('click', function(){
+             var a = document.createElement('li')
+             console.log(document.getElementById('input2').value)
+             a.innerHTML = document.getElementById('input2').value;
+             a.setAttribute('class', 'myClass')
+             document.getElementById ('content').append(a);
+             localStorage.setItem('listItem', document.getElementById('content').innerHTML)
+             
+})
+    </script>
+    </body>
+</html> 
